@@ -6,9 +6,7 @@
 ## Installation
 
     $ git clone https://github.com/stephenmathieson/release.sh.git /tmp/release
-    $ cd /tmp/release
-    $ make install
-    $ cd -
+    $ make -C /tmp/release install
 
 ## Usage
 
