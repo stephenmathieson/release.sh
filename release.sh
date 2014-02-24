@@ -37,7 +37,7 @@ for e in $REQUIRED; do
 done
 
 # populate changelog
-git changelog --tag $TAG
+git changelog --tag $TAG || true
 
 # find changelog
 CHANGELOG=`ls | egrep 'change|history' -i`
