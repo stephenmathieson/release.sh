@@ -39,9 +39,16 @@ done
 # populate changelog
 git changelog --tag $TAG
 
+# find changelog
+CHANGELOG=`ls | egrep 'change|history' -i`
+git add $CHANGELOG
+
 # open files to bump version numbers
 for file in $FILES; do
-  test -f "$file" && $EDITOR "$file"
+  test -f "$file" && {
+    $EDITOR $file;
+    git add $file
+  }
 done
 
 # actually release
