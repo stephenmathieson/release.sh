@@ -52,4 +52,4 @@ for file in $FILES; do
 done
 
 # actually release
-git release $tag
+git release $TAG
