@@ -18,7 +18,7 @@ FILES="package.json component.json"
 
 # must be in a git repo
 if [ ! -d ".git" ]; then
-  echo "not in a git repo"
+  echo >&2 "not in a git repo"
   exit 1
 fi
 
