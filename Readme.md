@@ -1,7 +1,9 @@
 
 # release.sh
 
-  Simple release script, riding on [git-extras](https://github.com/visionmedia/git-extras).
+  A convenience script for releasing (tagging) projects.  Will [populate your changelog](https://github.com/visionmedia/git-extras#git-changelog), open your editor (`$EDITOR`) for adjusting your `package.json` and/or `component.json` and finally push a new tag to origin.
+
+  Requires [git-extras](https://github.com/visionmedia/git-extras) to be installed.
 
 ## Installation
 
@@ -10,7 +12,7 @@
 
 ## Usage
 
-  Release version 5.6.7:
+  To release version `5.6.7`:
 
     $ release 5.6.7
 
