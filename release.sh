@@ -17,22 +17,22 @@ REQUIRED="git-release git-changelog"
 FILES="package.json component.json"
 
 # must be in a git repo
-if [ ! -d ".git" ]; then
-  echo >&2 "not in a git repo"
+[ -d ".git" ] || {
+  echo >&2 "not in a git repo";
   exit 1
-fi
+}
 
 # must specify a tag
-if [ -z $TAG ]; then
-  echo >&2 "tag required.";
-  exit 1;
-fi
+[ -z $TAG ] && {
+  echo >&2 "tag required";
+  exit 1
+}
 
 # check required bins
 for e in $REQUIRED; do
   command -v $e >/dev/null 2>&1 || {
     echo >&2 "$e must be installed.";
-    exit 1;
+    exit 1
   }
 done
 
